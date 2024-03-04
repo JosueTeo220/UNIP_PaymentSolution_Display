@@ -10,6 +10,9 @@
 extern "C" {
 #endif
 
+void setIPaddress(lv_event_t * e);
+void userPaymentSuccesful(lv_event_t * e);
+
 #ifdef __cplusplus
 } /*extern "C"*/
 #endif

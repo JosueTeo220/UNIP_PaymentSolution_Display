@@ -107,6 +107,7 @@ void ui_event_IMG_QR_Code(lv_event_t * e);
 lv_obj_t * ui_IMG_QR_Code;
 void ui_event_Label_Cancel(lv_event_t * e);
 lv_obj_t * ui_Label_Cancel;
+lv_obj_t * ui_ipadress;
 
 
 // SCREEN: ui_POS_S5
@@ -590,6 +591,7 @@ void ui_event_Panel_List_Bg(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
         _ui_screen_change(&ui_POS_S4, LV_SCR_LOAD_ANIM_FADE_ON, 50, 400, &ui_POS_S4_screen_init);
+        setIPaddress(e);
     }
 }
 void ui_event_POS_S4(lv_event_t * e)
@@ -621,6 +623,7 @@ void ui_event_IMG_QR_Code(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
         _ui_screen_change(&ui_POS_S5, LV_SCR_LOAD_ANIM_FADE_ON, 50, 400, &ui_POS_S5_screen_init);
+        userPaymentSuccesful(e);
     }
 }
 void ui_event_Label_Cancel(lv_event_t * e)

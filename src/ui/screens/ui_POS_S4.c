@@ -95,6 +95,14 @@ void ui_POS_S4_screen_init(void)
     lv_obj_set_style_text_align(ui_Label_Cancel, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_Label_Cancel, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    ui_ipadress = lv_label_create(ui_POS_S4);
+    lv_obj_set_width(ui_ipadress, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_ipadress, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_ipadress, 1);
+    lv_obj_set_y(ui_ipadress, 96);
+    lv_obj_set_align(ui_ipadress, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_ipadress, "Ip_adress");
+
     lv_obj_add_event_cb(ui_IMG_QR_Code, ui_event_IMG_QR_Code, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Label_Cancel, ui_event_Label_Cancel, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_POS_S4, ui_event_POS_S4, LV_EVENT_ALL, NULL);

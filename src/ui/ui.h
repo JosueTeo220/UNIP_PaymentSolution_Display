@@ -107,6 +107,7 @@ void ui_event_IMG_QR_Code(lv_event_t * e);
 extern lv_obj_t * ui_IMG_QR_Code;
 void ui_event_Label_Cancel(lv_event_t * e);
 extern lv_obj_t * ui_Label_Cancel;
+extern lv_obj_t * ui_ipadress;
 // SCREEN: ui_POS_S5
 void ui_POS_S5_screen_init(void);
 void ui_event_POS_S5(lv_event_t * e);
