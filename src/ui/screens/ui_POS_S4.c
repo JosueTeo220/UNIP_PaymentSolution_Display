@@ -16,8 +16,8 @@ void ui_POS_S4_screen_init(void)
     lv_img_set_src(ui_IMG_S2_Bg_5, &ui_img_img_bg_1_png);
     lv_obj_set_width(ui_IMG_S2_Bg_5, 272);
     lv_obj_set_height(ui_IMG_S2_Bg_5, 336);
-    lv_obj_set_x(ui_IMG_S2_Bg_5, -31);
-    lv_obj_set_y(ui_IMG_S2_Bg_5, -45);
+    lv_obj_set_x(ui_IMG_S2_Bg_5, 4);
+    lv_obj_set_y(ui_IMG_S2_Bg_5, -42);
     lv_obj_set_align(ui_IMG_S2_Bg_5, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_IMG_S2_Bg_5, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
     lv_obj_clear_flag(ui_IMG_S2_Bg_5, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
@@ -26,8 +26,8 @@ void ui_POS_S4_screen_init(void)
     lv_img_set_src(ui_IMG_S2_Bg_6, &ui_img_img_bg_1_png);
     lv_obj_set_width(ui_IMG_S2_Bg_6, 272);
     lv_obj_set_height(ui_IMG_S2_Bg_6, 336);
-    lv_obj_set_x(ui_IMG_S2_Bg_6, 7);
-    lv_obj_set_y(ui_IMG_S2_Bg_6, 81);
+    lv_obj_set_x(ui_IMG_S2_Bg_6, 0);
+    lv_obj_set_y(ui_IMG_S2_Bg_6, 41);
     lv_obj_set_align(ui_IMG_S2_Bg_6, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_IMG_S2_Bg_6, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
     lv_obj_clear_flag(ui_IMG_S2_Bg_6, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
@@ -44,8 +44,8 @@ void ui_POS_S4_screen_init(void)
     ui_Label_Amount_Title = lv_label_create(ui_POS_S4);
     lv_obj_set_width(ui_Label_Amount_Title, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label_Amount_Title, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label_Amount_Title, 0);
-    lv_obj_set_y(ui_Label_Amount_Title, 15);
+    lv_obj_set_x(ui_Label_Amount_Title, -2);
+    lv_obj_set_y(ui_Label_Amount_Title, 2);
     lv_obj_set_align(ui_Label_Amount_Title, LV_ALIGN_TOP_MID);
     lv_label_set_text(ui_Label_Amount_Title, "Amount");
     lv_obj_set_style_text_color(ui_Label_Amount_Title, lv_color_hex(0x0B1019), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -56,8 +56,8 @@ void ui_POS_S4_screen_init(void)
     ui_Label_QR_ready = lv_label_create(ui_POS_S4);
     lv_obj_set_width(ui_Label_QR_ready, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label_QR_ready, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label_QR_ready, 0);
-    lv_obj_set_y(ui_Label_QR_ready, 95);
+    lv_obj_set_x(ui_Label_QR_ready, 2);
+    lv_obj_set_y(ui_Label_QR_ready, 36);
     lv_obj_set_align(ui_Label_QR_ready, LV_ALIGN_TOP_MID);
     lv_label_set_text(ui_Label_QR_ready, "QR code ready for scanning");
     lv_obj_set_style_text_color(ui_Label_QR_ready, lv_color_hex(0x7F848F), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -67,11 +67,14 @@ void ui_POS_S4_screen_init(void)
 
     ui_IMG_QR_Code = lv_img_create(ui_POS_S4);
     lv_img_set_src(ui_IMG_QR_Code, &ui_img_img_qr_png);
-    lv_obj_set_width(ui_IMG_QR_Code, LV_SIZE_CONTENT);   /// 100
+    lv_obj_set_width(ui_IMG_QR_Code, LV_SIZE_CONTENT);   /// 50
     lv_obj_set_height(ui_IMG_QR_Code, LV_SIZE_CONTENT);    /// 50
+    lv_obj_set_x(ui_IMG_QR_Code, 3);
+    lv_obj_set_y(ui_IMG_QR_Code, 0);
     lv_obj_set_align(ui_IMG_QR_Code, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_IMG_QR_Code, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
     lv_obj_clear_flag(ui_IMG_QR_Code, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_img_set_zoom(ui_IMG_QR_Code, 150);
     lv_obj_set_style_bg_main_stop(ui_IMG_QR_Code, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_grad_stop(ui_IMG_QR_Code, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_color(ui_IMG_QR_Code, lv_color_hex(0xFF7A28), LV_PART_MAIN | LV_STATE_PRESSED);
@@ -83,7 +86,7 @@ void ui_POS_S4_screen_init(void)
     lv_obj_set_width(ui_Label_Cancel, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label_Cancel, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_x(ui_Label_Cancel, 0);
-    lv_obj_set_y(ui_Label_Cancel, -20);
+    lv_obj_set_y(ui_Label_Cancel, -28);
     lv_obj_set_align(ui_Label_Cancel, LV_ALIGN_BOTTOM_MID);
     lv_label_set_text(ui_Label_Cancel, "Cancel Payment");
     lv_obj_add_flag(ui_Label_Cancel, LV_OBJ_FLAG_CLICKABLE);     /// Flags

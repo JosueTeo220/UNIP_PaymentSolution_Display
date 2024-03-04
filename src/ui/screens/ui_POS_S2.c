@@ -35,8 +35,8 @@ void ui_POS_S2_screen_init(void)
     ui_Label_Enter_Amount = lv_label_create(ui_POS_S2);
     lv_obj_set_width(ui_Label_Enter_Amount, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label_Enter_Amount, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label_Enter_Amount, 2);
-    lv_obj_set_y(ui_Label_Enter_Amount, -2);
+    lv_obj_set_x(ui_Label_Enter_Amount, -5);
+    lv_obj_set_y(ui_Label_Enter_Amount, -3);
     lv_obj_set_align(ui_Label_Enter_Amount, LV_ALIGN_TOP_MID);
     lv_label_set_text(ui_Label_Enter_Amount, "Enter\nAmount");
     lv_obj_set_style_text_color(ui_Label_Enter_Amount, lv_color_hex(0x0B1019), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -47,20 +47,20 @@ void ui_POS_S2_screen_init(void)
     ui_Label_Want_to_pay = lv_label_create(ui_POS_S2);
     lv_obj_set_width(ui_Label_Want_to_pay, LV_SIZE_CONTENT);   /// 5
     lv_obj_set_height(ui_Label_Want_to_pay, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label_Want_to_pay, 8);
+    lv_obj_set_x(ui_Label_Want_to_pay, -2);
     lv_obj_set_y(ui_Label_Want_to_pay, 109);
     lv_obj_set_align(ui_Label_Want_to_pay, LV_ALIGN_TOP_MID);
     lv_label_set_text(ui_Label_Want_to_pay, "Enter the amount you want to pay");
     lv_obj_set_style_text_color(ui_Label_Want_to_pay, lv_color_hex(0x7F848F), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_Label_Want_to_pay, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui_Label_Want_to_pay, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_Label_Want_to_pay, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_Label_Want_to_pay, &lv_font_montserrat_12, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Panel_Amount = lv_obj_create(ui_POS_S2);
     lv_obj_set_height(ui_Panel_Amount, 80);
-    lv_obj_set_width(ui_Panel_Amount, lv_pct(106));
-    lv_obj_set_x(ui_Panel_Amount, 26);
-    lv_obj_set_y(ui_Panel_Amount, 38);
+    lv_obj_set_width(ui_Panel_Amount, lv_pct(87));
+    lv_obj_set_x(ui_Panel_Amount, 6);
+    lv_obj_set_y(ui_Panel_Amount, 35);
     lv_obj_set_align(ui_Panel_Amount, LV_ALIGN_TOP_MID);
     lv_obj_clear_flag(ui_Panel_Amount, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
     lv_obj_set_style_bg_color(ui_Panel_Amount, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -71,8 +71,8 @@ void ui_POS_S2_screen_init(void)
 
     ui_TextArea1 = lv_textarea_create(ui_Panel_Amount);
     lv_obj_set_height(ui_TextArea1, 51);
-    lv_obj_set_width(ui_TextArea1, lv_pct(81));
-    lv_obj_set_x(ui_TextArea1, -4);
+    lv_obj_set_width(ui_TextArea1, lv_pct(107));
+    lv_obj_set_x(ui_TextArea1, -2);
     lv_obj_set_y(ui_TextArea1, -1);
     lv_obj_set_align(ui_TextArea1, LV_ALIGN_CENTER);
     if("0123456789.+-" == "") lv_textarea_set_accepted_chars(ui_TextArea1, NULL);
@@ -119,8 +119,8 @@ void ui_POS_S2_screen_init(void)
     ui_Label_Amount_Pirce = lv_label_create(ui_Panel_Amount);
     lv_obj_set_width(ui_Label_Amount_Pirce, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label_Amount_Pirce, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label_Amount_Pirce, -101);
-    lv_obj_set_y(ui_Label_Amount_Pirce, 4);
+    lv_obj_set_x(ui_Label_Amount_Pirce, -75);
+    lv_obj_set_y(ui_Label_Amount_Pirce, 1);
     lv_obj_set_align(ui_Label_Amount_Pirce, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label_Amount_Pirce, "$");
     lv_obj_set_style_text_font(ui_Label_Amount_Pirce, &ui_font_Big_Number, LV_PART_MAIN | LV_STATE_DEFAULT);
