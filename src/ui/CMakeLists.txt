@@ -11,6 +11,7 @@ SET(SOURCES screens/ui_POS_S1.c
     images/ui_img_img_pos_png.c
     images/ui_img_img_arrow_right_png.c
     images/ui_img_img_btc_png.c
+    images/ui_img_img_arrow_right_png.c
     images/ui_img_img_eth_png.c
     images/ui_img_img_xrp_png.c
     images/ui_img_img_card_png.c
